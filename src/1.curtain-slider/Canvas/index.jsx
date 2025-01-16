@@ -3,7 +3,6 @@ import { CurtainsContext } from "../store/reduxStore";
 import "./style.scss";
 
 const Canvas = () => {
-  // init our curtains instance
   const { state, dispatch } = useContext(CurtainsContext);
   const container = useRef();
 
@@ -12,7 +11,6 @@ const Canvas = () => {
   useLayoutEffect(() => {
     const { curtains } = state;
     if (container.current && !curtains.container) {
-      // set our curtains instance container once
       curtains.setContainer(container.current);
 
       curtains
@@ -37,7 +35,6 @@ const Canvas = () => {
 
           delta.y = -delta.y;
 
-          // threshold
           if (delta.y > 60) {
             delta.y = 60;
           } else if (delta.y < -60) {
@@ -61,7 +58,6 @@ const Canvas = () => {
         payload: curtains.container,
       });
 
-      // dispose curtains if we're unmounting the component (shouldn't ever happen)
       return () => {
         curtains.dispose();
       };

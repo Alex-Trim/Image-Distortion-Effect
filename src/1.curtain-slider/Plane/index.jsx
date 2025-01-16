@@ -4,7 +4,6 @@ import { Plane, Vec2, Vec3 } from "curtainsjs";
 import "./style.scss";
 import { CurtainsContext } from "../store/reduxStore";
 import { vs, fs } from "./shaders.js";
-// vertex and fragment shaders
 
 const WebPlane = ({ url, title, index, description }) => {
   const { state } = useContext(CurtainsContext);
@@ -42,7 +41,6 @@ const WebPlane = ({ url, title, index, description }) => {
         plane.uniforms.direction.value = someRef.current.scrollEffect / 500;
       });
 
-      // remove plane if we're unmounting the component
       return () => {
         plane.remove();
       };
