@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./style.scss";
 import Plane from "./Plane";
 import Canvas from "./Canvas";
