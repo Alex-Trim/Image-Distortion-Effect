@@ -1,9 +1,9 @@
-import img1 from "../../public/img/photo-1542291026-7eec264c27ff.webp";
-import img2 from "../../public/img/photo-1491553895911-0055eca6402d.webp";
-import img3 from "../../public/img/photo-1593081891731-fda0877988da.webp";
-import img4 from "../../public/img/photo-1595950653106-6c9ebd614d3a.webp";
-import img5 from "../../public/img/photo-1597045566677-8cf032ed6634.webp";
-import img6 from "../../public/img/photo-1603631540004-d7b2616b2323.webp";
+import img1 from "../assets/img/photo-1542291026-7eec264c27ff.webp";
+import img2 from "../assets/img/photo-1491553895911-0055eca6402d.webp";
+import img3 from "../assets/img/photo-1593081891731-fda0877988da.webp";
+import img4 from "../assets/img/photo-1595950653106-6c9ebd614d3a.webp";
+import img5 from "../assets/img/photo-1597045566677-8cf032ed6634.webp";
+import img6 from "../assets/img/photo-1603631540004-d7b2616b2323.webp";
 
 const unsplashUrls = [
   {
