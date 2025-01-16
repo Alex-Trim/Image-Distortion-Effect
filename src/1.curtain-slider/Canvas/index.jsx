@@ -10,7 +10,7 @@ const Canvas = () => {
 
   useLayoutEffect(() => {
     const { curtains } = state;
-    if (container.current && !curtains.container) {
+    if (container.current && !state.curtains.container) {
       curtains.setContainer(container.current);
 
       curtains
@@ -41,11 +41,13 @@ const Canvas = () => {
             delta.y = -60;
           }
 
-          const newScrollEffect = curtains.lerp(
+          const lerp = (start, end, t) => start * (1 - t) + end * t;
+          const newScrollEffect = lerp(
             someRef.current.scrollEffect,
             delta.y * 1.5,
             0.5
           );
+
           someRef.current.scrollEffect = newScrollEffect;
           dispatch({
             type: "SET_SCROLL_EFFECT",
